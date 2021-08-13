@@ -1,11 +1,28 @@
 import React from 'react';
-
-const Products = () => {
+import Link from 'next/link';
+import styles from '../../styles/Home.module.css';
+const Products = ({ productId = 100 }) => {
   return (
-    <div>
-      <h2>Product 1</h2>
-      <h2>Product 2</h2>
-      <h2>Product 3</h2>
+    <div className={styles.container}>
+      <Link href={`/products/${productId}`}>
+        <a>
+          <h2>Product {productId}</h2>
+        </a>
+      </Link>
+      <Link href="/products/2">
+        <a>
+          <h2>Product 2</h2>
+        </a>
+      </Link>
+      <Link href="/products/3">
+        <a>
+          <h2>Product 3</h2>
+        </a>
+      </Link>
+
+      <Link href="/" replace>
+        <a>Home</a>
+      </Link>
     </div>
   );
 };

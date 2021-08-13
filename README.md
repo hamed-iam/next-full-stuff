@@ -35,3 +35,6 @@ yarn dev
 - Cath-all routes
 - Navigate from UI
 - Programmatically navigate b/w Pages
+
+--Link element in next : anchor tag inside and href should be on Link instead of anchor
+-- Replace prop in Link will replace the current history state, instead of adding new url to the stack
